@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Ejercicio 6*/
+        /*Juan tiene N dólares, David tiene la mitad de lo que posee Juan y José la mitad de lo que poseen Juan y David juntos.
+         Mostrar el promedio de la cantidad de dinero que tienen entre los tres*/
+        
+        function Tomar_datos(){
+            var juan=parseInt(prompt("Ingrese el dinero de Juan:"));
+            Procesar_datos(juan);
+        }
+        function Procesar_datos(juan){
+            var david=juan/2
+            cantidad=david+juan
+            var jose=cantidad/2
+            resultado=juan+david+jose
+            resultado1=resultado/3
+            Imprimir_datos(resultado1);
+        }
+        function Imprimir_datos(resultado1){
+            alert(resultado1);
+            console.log(resultado1);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

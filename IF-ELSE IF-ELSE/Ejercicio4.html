@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Ejercicio 4*/
+        /*Programa que determina si un número es positivo, negativo o cero*/
+        function Tomar_datos(){
+            var numero=parseInt(prompt("Ingrese un numero:"));
+            Procesar_datos(numero);
+        }
+        function Procesar_datos(numero){
+            if(numero>=1){
+                resultado=("El numero " +numero+ " es psotivo.");
+            }
+            else if(numero==0){
+                resultado=("El numero " +numero+ " es cero.");
+            }
+            else{
+                resultado=("El numero " +numero+ " es negativo.");
+            }    
+            Imprimir_datos(resultado)
+        }
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>
