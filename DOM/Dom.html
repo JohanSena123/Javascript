@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Principal">
+    <!--GetElementById-->
+        <div style="background-color: antiquewhite;border: solid;">
+            <h1 id="titulo">¿Quieres saber mas sobre GetByElemntId?</h1>
+            <p id="mensaje"></p>
+            <button class="Boton" onclick="cambiarTitulo()">Mas informacion</button>
+        </div>
+    <!--GetElementsByClassName-->
+        <div style="background-color: antiquewhite;border: solid;margin-top: 10px;">
+            <h1 class="titulo2">¿Quieres saber mas sobre GetElementsByClassName? </h1>
+            <p class="mensaje2"></p>
+            <button class="Boton" onclick="cambiarTitulo2()">Mas informacion</button>
+        </div>
+    </div>
+</body>
+
+<script>
+//GetElementById
+    function cambiarTitulo(){
+        var elemento=document.getElementById("titulo");
+        elemento.innerHTML="¿Que es el GetElementById?"
+        CambiarParrafo()
+    }
+    function CambiarParrafo(){
+        let elemento=document.getElementById("mensaje");
+        elemento.innerHTML="El método getElementById permite, como su nombre indica, seleccionar un elemento del documento por medio del valor del atributo id que se le haya asignado."
+    } 
+//GetElementsByClassName
+    function cambiarTitulo2(){
+        var elemento2=document.getElementsByClassName("titulo2");
+        elemento2[0].innerHTML="¿Que es el GetElementByClassName?"
+        CambiarParrafo2()
+    }
+    function CambiarParrafo2(){
+        let elemento2=document.getElementsByClassName("mensaje2");
+        elemento2[0].innerHTML="getElementsByClassName es un método en JavaScript que se utiliza para seleccionar todos los elementos de un documento HTML que tienen una clase específica. Este método devuelve una HTMLCollection de elementos que tienen la clase indicada. A diferencia de otros métodos como getElementById que seleccionan un único elemento, getElementsByClassName puede seleccionar varios elementos que comparten la misma clase."
+    }
+</script>
+</html>
