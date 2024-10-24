@@ -20,6 +20,18 @@
             <p class="mensaje2"></p>
             <button class="Boton" onclick="cambiarTitulo2()">Mas informacion</button>
         </div>
+    <!--GetElemntsByTagName-->
+        <div style="background-color: antiquewhite;border: solid;margin-top: 10px;">
+            <h1>¿Quieres saber mas sobre GetElemntsByTagName? </h1>
+            <p></p>
+            <button class="Boton" onclick="cambiarTitulo3()">Mas informacion</button>
+        </div>
+    <!--QuerySelector-->
+        <div style="background-color: antiquewhite;border: solid;margin-top: 10px;">
+            <h1>¿Quieres saber mas sobre querySelector? </h1>
+            <p></p>
+            <button class="Boton" onclick="cambiarTitulo4()">Mas informacion</button> 
+        </div>
     </div>
 </body>
 
@@ -42,7 +54,28 @@
     }
     function CambiarParrafo2(){
         let elemento2=document.getElementsByClassName("mensaje2");
-        elemento2[0].innerHTML="getElementsByClassName es un método en JavaScript que se utiliza para seleccionar todos los elementos de un documento HTML que tienen una clase específica. Este método devuelve una HTMLCollection de elementos que tienen la clase indicada. A diferencia de otros métodos como getElementById que seleccionan un único elemento, getElementsByClassName puede seleccionar varios elementos que comparten la misma clase."
+        elemento2[0].innerHTML="es un método en JavaScript que se utiliza para seleccionar todos los elementos en un documento HTML que tienen una o más clases específicas. Devuelve una colección (tipo HTMLCollection) que contiene todos los elementos que coinciden con el nombre de la clase dada"
     }
+//GetElementByTagName
+    function cambiarTitulo3(){
+        var elemento3=document.getElementsByTagName("h1");
+        elemento3[2].innerHTML="¿Que es el GetElementByTagName?"
+        cambiarParrafo3()
+    }
+    function cambiarParrafo3(){
+        let elemento3=document.getElementsByTagName("p");
+        elemento3[2].innerHTML="es un método en JavaScript que se utiliza para seleccionar todos los elementos en un documento HTML que tienen un nombre de etiqueta específico (como div, p, h, etc.). "
+    }
+//QuerySelector
+    function cambiarTitulo4(){
+        var elemento4 = document.querySelector("titulo");
+        elemento4.innerHTML="¿Que es el QuerySelector"
+        cambiarParrafo4()
+    }
+    function cambiarParrafo4 (){
+        let elemento4=document.querySelector("p")
+        elemento4.innerHTML="Hola"
+    }
+
 </script>
 </html>
