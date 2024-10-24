@@ -10,16 +10,16 @@
         /*Ejercicio 2*/
         /*Programa que determina si un estudiante ha aprobado un examen con una calificación mínima de 60*/
         function Tomar_datos(){
-            var nombre=prompt("Ingrese el nombre del estudiante");
-            var calificacion=parseInt(prompt("Ingrese la calificacion"));
+            var nombre=prompt("Ingrese el nombre del estudiante:");
+            var calificacion=parseInt(prompt("Ingrese la calificacion:"));
             Procesar_datos(nombre,calificacion);
         }
         function Procesar_datos(nombre,calificacion){
             if(calificacion>=60){
-                resultado=("El estudiante " +nombre+ " Aprobo");
+                resultado=("El estudiante " +nombre+ " Aprobo.");
             }
             else{
-                resultado=("El estudiante " +nombre+ " No aprobo");
+                resultado=("El estudiante " +nombre+ " No aprobo.");
             }
             Imprimir_datos(resultado);
         }

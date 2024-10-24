@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,25 @@
 </head>
 <body>
     <script>
-        alert("Programa que verifica si un número es par o impar");
+        /*Ejercicio 1*/
+        /*Programa que verifica si un número es par o impar*/
 
         function Tomar_datos(){
-            var numero=parseInt(prompt("Digite un numero"));
+            var numero=parseInt(prompt("Digite un numero:"));
             Procesar_datos(numero)
         }
         function Procesar_datos(numero){
             if(numero%2==0){
-                resultado="El numero es par"
+                resultado="El numero es par."
             }
             else{
-                resultado="El numero es impar"
+                resultado="El numero es impar."
             }
             Imprimir_datos(resultado)
         }
         function Imprimir_datos(resultado){
             alert(resultado)
-            console.log(resultado)
+            console.log(resultado);
         }
         Tomar_datos()
     </script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que calcule el descuento en una tienda según el monto de compra. Los 
+        requerimientos son:
+        Solicitar al usuario el monto total de compra.
+        Calcular el descuento según las siguientes condiciones:
+        Si el monto de compra es mayor o igual a 1000, aplicar un descuento del 10%.
+        Si el monto de compra es mayor o igual a 500, aplicar un descuento del 5%.
+        En cualquier otro caso, no aplicar descuento.
+        Mostrar el monto total con el descuento aplicado.*/
+
+    function Tomar_datos(){
+        var monto=parseInt(prompt("Ingrese el monto total de su compra:"));
+        Procesar_datos(monto);
+    }
+    function Procesar_datos(monto){
+        let porcentaje1=10
+        let porcentaje2=5
+        porcentaje1_1=monto*porcentaje1/100
+        porcentaje2_2=monto*porcentaje2/100
+        if (monto>=1000){
+            resultado="De los " +monto+ " recibio un 10%. Su descuento fue de: " +porcentaje1_1+ "."
+        }
+        else if (monto>=500 && monto<1000){
+            resultado="De los " +monto+ " recibio un 5%. Su descuento fue de: " +porcentaje2_2* "."
+        }
+        else{
+            resultado="De los " +monto+ " No tiene descuento"
+        }
+        Imprimir_datos(resultado);
+    }
+    function Imprimir_datos(resultado){
+        alert(resultado);
+        console.log(resultado);
+    }
+    Tomar_datos();
+    </script>
+</body>
+</html>

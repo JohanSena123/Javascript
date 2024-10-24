@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Escribe un programa que clasifique un triángulo según sus lados. Los requerimientos son:
+        Solicitar al usuario los tres lados del triángulo.
+        Verificar si el triángulo es equilátero (todos los lados son iguales), isósceles (dos lados son iguales) 
+        o escaleno (ningún lado es igual a otro).
+        Mostrar un mensaje con la clasificación del triángulo.*/
+
+        function Tomar_datos(){
+            var Lado1=parseFloat(prompt("Ingrese  el primer lado:"));
+            var Lado2=parseFloat(prompt("Ingrese el segundo lado:"));
+            var Lado3=parseFloat(prompt("Ingrese el tercer lado:"));
+            Procesar_datos(Lado1,Lado2,Lado3);
+        }
+        function Procesar_datos(Lado1,Lado2,Lado3){
+            if(Lado1==Lado2 && Lado2==Lado3){
+                resultado="Es un triangulo equilátero."
+            }
+            else if(Lado1==Lado2 ||  Lado2==Lado3 || Lado1==Lado3){
+                resultado="Es un triangulo isóceles."
+            }
+            else{
+                resultado="Es un triangulo escaleno."
+            }
+            Imorimir_datos(resultado);
+        }
+        function Imorimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
+        }
+        Tomar_datos();
+    </script>
+    
+</body>
+</html>

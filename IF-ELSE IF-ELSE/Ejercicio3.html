@@ -11,28 +11,28 @@
         /* Programa que clasifica una calificación en A, B, C, D o F, según el rango en el que se encuentre la calificación dentro del rango 1-100.*/
 
         function Tomar_datos(){
-            var nombre=prompt("Digite el nombre del estudiante");
-            var numero=parseInt(prompt("Ingrese el numero de la calificacion"));
+            var nombre=prompt("Digite el nombre del estudiante:");
+            var numero=parseInt(prompt("Ingrese el numero de la calificacion:"));
             Procesar_datos(nombre,numero);
         }
         function Procesar_datos(nombre,numero){
             if (numero==100){
-                resultado=("La calificacion de " +nombre+ " es A");
+                resultado=("La calificacion de " +nombre+ " es A.");
             }
             else if(numero>=80 && numero<100){
-                resultado=("La calificacion de " +nombre+ " es B");
+                resultado=("La calificacion de " +nombre+ " es B.");
             }
             else if (numero>=60 && numero<80){
-                resultado=("La calificacion de " +nombre+ " es c");
+                resultado=("La calificacion de " +nombre+ " es c.");
             }
             else if (numero>=40 && numero<60){
-                resultado=("La calificacion de " +nombre+ " es D");
+                resultado=("La calificacion de " +nombre+ " es D.");
             }
             else if(numero>=20 && numero<40){
-                resultado=("La calificacion de " +nombre+ " es F");
+                resultado=("La calificacion de " +nombre+ " es F.");
             }
             else{
-                resultado=("La calificacion de " +nombre+ " es no Aprobado");
+                resultado=("La calificacion de " +nombre+ " es no Aprobado.");
             }
             Imprimir_datos(resultado)
         }
