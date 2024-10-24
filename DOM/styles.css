@@ -9,7 +9,7 @@
 }
 #mensaje{
     font-family:'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 15px;
 }
 .Boton{
     width: 100px;
@@ -23,13 +23,13 @@
 }
 .mensaje2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 h1{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
 }
 p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
 }

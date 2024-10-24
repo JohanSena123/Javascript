@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Ejercicio 7*/
+        /*Pedir tres números enteros con un valor del 1 al 10, sacar el promedio de los tres números y mostrar true si el promedio es mayor a 5 caso contrario mostrar false*/
+        function Tomar_datos(){
+            var numero1=parseInt(prompt("Ingrese el primer numero"));
+            var numero2=parseInt(prompt("Ingrese el segundo numero"));
+            var numero3=parseInt(prompt("Ingrese el tercer numero:"));
+            Procesar_datos(numero1,numero2,numero3);
+        }
+        function Procesar_datos(numero1,numero2,numero3){
+            var sumar=numero1+numero2+numero3
+            resultado=sumar/3
+            if(resultado>=5){
+            resultado=true
+            }
+            else{
+            resultado=false
+            }
+            Imprimir_datos(resultado);
+        }
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            conosole.log(resultado);
+        }
+       Tomar_datos();
+    </script>
+</body>
+</html>

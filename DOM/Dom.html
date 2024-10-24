@@ -28,9 +28,15 @@
         </div>
     <!--QuerySelector-->
         <div style="background-color: antiquewhite;border: solid;margin-top: 10px;">
-            <h1>¿Quieres saber mas sobre querySelector? </h1>
-            <p></p>
+            <h1 id="prueba">¿Quieres saber mas sobre querySelector? </h1>
+            <p id="prueba2"></p>
             <button class="Boton" onclick="cambiarTitulo4()">Mas informacion</button> 
+        </div>
+        <!--QuerySelectorAll-->
+        <div style="background-color: antiquewhite;border: solid;margin-top: 10px;">
+            <h1 id="titulo">¿Quieres saber mas sobre querySelectorAll? </h1>
+            <p id="mensaje2"></p>
+            <button class="Boton" onclick="cambiarTitulo5()">Mas informacion</button> 
         </div>
     </div>
 </body>
@@ -68,14 +74,23 @@
     }
 //QuerySelector
     function cambiarTitulo4(){
-        var elemento4 = document.querySelector("titulo");
-        elemento4.innerHTML="¿Que es el QuerySelector"
+        var elemento4 = document.querySelector("#prueba");
+        elemento4.innerHTML="¿Que es el QuerySelector?"
         cambiarParrafo4()
     }
     function cambiarParrafo4 (){
-        let elemento4=document.querySelector("p")
-        elemento4.innerHTML="Hola"
+        let elemento4=document.querySelector("#prueba2");
+        elemento4.innerHTML="Es un método en JavaScript que se utiliza para seleccionar el primer elemento que coincida con un selector CSS específico en el DOM (Document Object Model) de una página web."
     }
-
+//QuerySelectorAll
+    function cambiarTitulo5(){
+        var elemento5=document.querySelectorAll("#titulo");
+        elemento5[1].innerHTML="¿Que es el QuerySelectorAll?"
+        cambiarParrafo5()
+    }
+    function cambiarParrafo5(){
+        let elemento5=document.querySelectorAll("#mensaje2");
+        elemento5[0].innerHTML="En JavaScript es un método que se usa para seleccionar todos los elementos en una página web que coincidan con un selector CSS específico. Es como una búsqueda que te devuelve una lista de elementos que cumplen con los criterios que indiques."
+    }
 </script>
 </html>
