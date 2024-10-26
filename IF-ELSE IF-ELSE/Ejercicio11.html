@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que solicite al usuario el precio de un producto y la cantidad comprada. El 
+        programa debe aplicar los siguientes descuentos:
+        Si la cantidad comprada es mayor o igual a 10 unidades, aplicar un descuento del 10% al precio 
+        total.
+        Si la cantidad comprada es mayor o igual a 5 unidades pero menor a 10 unidades, aplicar un 
+        descuento del 5% al precio total.
+        Si la cantidad comprada es menor a 5 unidades, no aplicar ningún descuento.
+        El programa debe mostrar el precio total a pagar después de aplicar el descuento, si corresponde.*/
+
+    
+    function Tomar_datos(){
+        var Precio=parseInt(prompt("Ingrese el precio del producto:"));
+        var Cantidad=parseInt(prompt("Ingrese la cantidad comprada:"));
+        Procesar_datos(Precio,Cantidad);
+    }
+    function Procesar_datos(Precio,Cantidad){
+        let Porcentaje1=10
+        let Porcentaje2=5
+        Porcentaje1_1=Precio*Porcentaje1/100
+        Porcentaje2_2=Precio*Porcentaje2/100
+        Total=Porcentaje1_1-Precio
+        Total2=Porcentaje2_2-Precio
+
+        if(Cantidad>=10){
+            resultado="Su cantidad fue de " +Cantidad+ ".  Por la tanto recibio un 10% de su compra de " +Precio+ ". Su descuento es de " +Porcentaje1_1+ ". Su total fue " +Total+ "."
+        }
+        else if(Cantidad<=5){
+            resultado="Su cantidad fue de " +Cantidad+ ".  Por la tanto recibio un 5% de su compra de " +Precio+ ". Su descuento es de " +Porcentaje2_2+ ". Su total fue " +Total2+ "."
+        }
+        else{
+            resultado="Su cantidad fue de " +Cantidad+ ". No aplica para descuento en su compra de " +Precio+ ". Su total fue " +Precio+ "-"
+        }
+        Imprimir_datos(resultado);
+    }
+    function Imprimir_datos(resultado){
+        alert(resultado);
+        console.log(resultado);
+    }
+    Tomar_datos();
+    </script>
+</body>
+</html>

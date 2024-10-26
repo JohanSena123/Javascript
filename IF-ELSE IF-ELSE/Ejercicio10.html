@@ -25,14 +25,16 @@
         let porcentaje2=5
         porcentaje1_1=monto*porcentaje1/100
         porcentaje2_2=monto*porcentaje2/100
+        Total=porcentaje1_1-monto
+        Total2=porcentaje2_2-monto
         if (monto>=1000){
-            resultado="De los " +monto+ " recibio un 10%. Su descuento fue de: " +porcentaje1_1+ "."
+            resultado="De los " +monto+ " recibio un 10%. Su descuento fue de: " +porcentaje1_1+ ". Su total fue de " +Total+ "."
         }
         else if (monto>=500 && monto<1000){
-            resultado="De los " +monto+ " recibio un 5%. Su descuento fue de: " +porcentaje2_2* "."
+            resultado="De los " +monto+ " recibio un 5%. Su descuento fue de: " +porcentaje2_2+ ". Su total fue de " +Total2+ "."
         }
         else{
-            resultado="De los " +monto+ " No tiene descuento"
+            resultado="De los " +monto+ ". No tiene descuento. Su total fue de " +monto+ "."
         }
         Imprimir_datos(resultado);
     }

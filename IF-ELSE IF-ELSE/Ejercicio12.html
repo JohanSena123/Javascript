@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que simule la creación de una factura. Debes utilizar todas las 
+        variables mencionadas anteriormente en un contexto relacionado con una compra. 
+        Asigna valores a las variables. Por ejemplo, define un nombre de cliente, un producto, la 
+        cantidad de productos, el precio unitario, indica si el cliente es estudiante o no, y asigna 
+        un tipo de cliente representado por una letra (A, B, C, etc.).- Calcula el subtotal multiplicando 
+        la cantidad de productos por el precio unitario.- Calcula el impuesto, 
+        que puede ser un 13% del subtotal si el cliente no es estudiante, o 
+        un 5% si lo es. - Calcula el total sumando el subtotal y el impuesto.
+        Muestra un mensaje que contenga la factura con los siguientes detalles:*/
+
+        function Tomar_datos(){
+            var nombre=prompt("Ingrese su nombre:");
+            var producto=prompt("Ingrese el producto:");
+            var cantidad=parseInt(prompt("Ingrese la cantidad de productos:"));
+            var precio=parseInt(prompt("Ingrese el precio del productos:"));
+            var tipo_de_cliente=prompt("Ingrese el tipo de cliente que es: A=Premiun B=Estudiante C=Particular:");
+            var premiun=("A")
+            var estudiante=("B")
+            var particular="C"
+            Procesar_datos(nombre,producto,cantidad,precio,tipo_de_cliente,premiun,estudiante,particular);
+        }
+        function Procesar_datos(nombre,producto,cantidad,precio,tipo_de_cliente,premiun,estudiante,particular){
+            subtotal=cantidad*precio
+            let Porcentaje1=13
+            let Porcentaje2=5
+            impuesto=subtotal*Porcentaje1/100
+            impuesto2=subtotal*Porcentaje2/100
+            Total=subtotal+impuesto
+            Total2=subtotal+impuesto2
+            let resultado;
+            if (tipo_de_cliente==premiun){
+                tipo="Es un cliente Premiun"
+                if(impuesto){
+                resultado="Se le agrego un 13% de impuesto al cliente " +nombre+ ". Su subtotal fue " +subtotal+ " mas el impuesto de " +impuesto+ ". Su total seria=" +Total+ "."
+                }
+                else{
+                    resultado="nada"
+                }
+            }    
+            else if(tipo_de_cliente==estudiante){
+                tipo="Es un Estudiante"
+                if(impuesto2){
+                resultado="Se le agrego un 5% de impuesto al cliente " +nombre+ " por ser estudiante. Su subtotal fue " +subtotal+ " mas el impuesto de " +impuesto2+ ". Su total seria=" +Total2+ "."
+                }
+                else{
+                    resultado="nada"
+                }
+            }
+            else if (tipo_de_cliente==particular){
+                tipo="Es un cliente Particular"
+                if(impuesto){
+                resultado="Se le agrego un 13% de impuesto al cliente " +nombre+ ". Su subtotal fue " +subtotal+ " mas el impuesto de " +impuesto+ ". Su total seria=" +Total+ "."
+                }
+                else{
+                    resultado="nada"
+                }
+            }
+            else{
+                tipo="No esta registrado como ningun tipo de cliente en nuestra base de datos."
+            }   
+            Imprimir_datos(tipo,resultado);
+        }
+        function Imprimir_datos(tipo,resultado){
+            alert(tipo);
+            alert(resultado);
+            console.log(tipo,resultado);
+        
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>
