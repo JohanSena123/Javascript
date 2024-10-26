@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Combina las dos simulaciones anteriores. El programa debe simular un ascensor que lleva al 
+        usuario a un piso deseado. Antes de moverse, el programa verifica si la temperatura ambiente 
+        está dentro del rango aceptable. Si la temperatura está dentro del rango, el ascensor se mueve 
+        al piso deseado. Si la temperatura está fuera del rango, muestra un mensaje de que la 
+        temperatura no es adecuada y no permite el movimiento del ascensor*/
+
+        function Tomar_datos(){
+            var piso=parseInt(prompt("Ingrese el piso al que desea ir:"));
+            var temperatura=parseInt(prompt("Ingrese la temperatura actual:"));
+            Procesar_datos(piso,temperatura);
+        }
+        function Procesar_datos(piso,temperatura){
+            let mensaje1;
+            let mensaje2;
+            if(temperatura>=18 && temperatura<=25){
+                mensaje1="Analizando temperatura..."
+                if(mensaje1)
+                mensaje2="Temperatura adecuada. Subiendo al piso " +piso+ "."
+            }
+            else{
+                mensaje1="Temperatura no adecuada. No se permite subir al piso " +piso+ "."
+            }
+            Imprimir_datos(mensaje1,mensaje2);
+        }
+        function Imprimir_datos(mensaje1,mensaje2){
+            alert(mensaje1);
+            alert(mensaje2);
+            console.log(mensaje1,mensaje2);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

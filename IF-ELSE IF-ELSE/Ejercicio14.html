@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Desarrolla un programa que simule un ascensor que tiene un límite de peso. El usuario ingresa 
+        su peso y el piso al que desea ir. El programa debe verificar si el peso está dentro del límite 
+        permitido. Si es así, el ascensor se mueve al piso deseado. Si no, muestra un mensaje de que 
+        el ascensor está sobrecargado.*/
+        function Tomar_datos(){
+            var peso=parseInt(prompt("Ingrese su peso:"));
+            var piso=parseInt(prompt("Ingrese el piso al que desea ir (1-10):"));
+            Procesar_datos(peso,piso);
+        }
+        function Procesar_datos(peso,piso){
+            let rango;
+            let invalido;
+            let valido;
+            if(piso>=1 && piso<=10){
+                rango="El piso " +piso+ " esta disponible. Analizando el peso..."
+                if (peso>=80 && peso<=0){
+                    invalido="No esta dentro del limite de peso permitido. El ascensor no puede subir."
+                }
+                else{
+                    invalido="Peso permitido. Subiendo..."
+                    if(invalido){
+                        valido="Ha llegado al piso " +piso+ "."
+                    }
+                }
+            }
+            else{
+                rango="El piso " +piso+ " no se encuentra disponible"
+            }
+            Imprimir_datos(rango,invalido,valido)
+        }
+        function Imprimir_datos(rango,invalido,valido){
+            alert(rango);
+            alert(invalido);
+            alert(valido);
+            console.log(rango,invalido,valido);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

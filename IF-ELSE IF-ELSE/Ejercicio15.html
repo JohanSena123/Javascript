@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Crea un programa que simule un sensor de temperatura ambiente. El usuario ingresa la 
+        temperatura actual y el programa verifica si la temperatura está dentro de un rango aceptable 
+        (por ejemplo, entre 18°C y 25°C). Si está dentro del rango, muestra un mensaje indicando que 
+        la temperatura es adecuada. Si no, muestra un mensaje de que la temperatura está fuera del 
+        rango deseado.*/
+
+        function Tomar_datos(){
+            var temperatura=parseInt(prompt("Ingrese la temperatura actual:"));
+            Procesar_datos(temperatura);
+        }
+        function Procesar_datos(temperatura){
+            if(temperatura<=25 && temperatura>=18){
+                mensaje="La temperatura " +temperatura+ " es adecuada."
+            }
+            else{
+                mensaje="La temperatura " +temperatura+ " no es adecuada."
+            }
+        Imprimir_datos(mensaje);
+        }
+        function Imprimir_datos(mensaje){
+            alert(mensaje);
+            console.log(mensaje);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

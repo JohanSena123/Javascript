@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Escribe un programa que simule el funcionamiento de un ascensor. El usuario ingresa el piso al 
+        que desea ir, y el programa verifica si es un piso válido (usar un rango de numero). Si es 
+        válido, el ascensor se mueve al piso deseado. Si no es válido, muestra un mensaje de error*/
+        
+        function Tomar_datos(){
+            var piso=parseInt(prompt("Ingrese un piso al que desea ir dentro (1-10)"));
+            Procesar_datos(piso);
+        }
+        function Procesar_datos(piso){
+            let resultado;
+            let valido;
+            if (piso>=1 && piso<=10){
+                resultado="El piso escogido esta disponible. Subiendo..."
+                if(resultado){
+                    valido="Ha llegado al piso " +piso+ "."
+                }
+            }
+            else{
+                resultado="El piso " +piso+ " no se encuentra disponible"
+            }
+            Imprimir_datos(resultado,valido)
+        }
+        function Imprimir_datos(resultado,valido){
+            alert(resultado);
+            alert(valido);
+            console.log(resultado,valido);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>
