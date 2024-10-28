@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Categorías de edad: Solicita al usuario que ingrese su edad. para determinar en qué 
+    categoría de edad se encuentra (niño, adolescente, adulto, adulto mayor) y muestra un 
+    mensaje acorde.*/
+    function Tomar_datos(){
+        var edad=parseInt(prompt("Ingrese su edad:"));
+        Procesar_datos(edad);
+    }
+    function Procesar_datos(edad){
+        let resultado
+        switch(true){
+            case (edad>=1 && edad<=10):
+                resultado="Es un niño"
+                break;
+            case (edad>=11 && edad<=16):
+                resultado="Es un adolescente"
+                break;
+            case (edad>=17 && edad<=50):
+                resultado="Es un adulto"
+                break;
+            case (edad>=51 && edad<=80):
+                resultado="Adulto mayor"
+                break;
+            default:
+                alert("Edad no valida")
+                break;
+        }
+        Imprimir_datos(resultado);
+    }
+    function Imprimir_datos(resultado){
+        alert(resultado);
+        console.log(resultado)
+    }
+    Tomar_datos();
+    </script>
+</body>
+</html>
