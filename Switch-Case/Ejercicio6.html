@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Desarrolla un programa que simule un asistente virtual para un cine. El programa debe solicitar
+        al usuario que ingrese su edad y, en función de la edad, recomendar una película adecuada:
+        Niños (Edad menor a 7 años): Recomendará películas animadas y educativas aptas para todas
+        las edades. Niños y Adolescentes (Edad entre 7 y 17 años): Sugerirá películas adecuadas para la
+        familia, como animaciones, aventuras y comedias familiares. Adultos (Edad entre 18 y 30 años):
+        Ofrecerá una variedad de géneros, como acción, drama, comedia y ciencia ficción. Personas
+        Mayores (Edad mayor a 31 años): Recomendará películas clásicas y dramas que pueden ser de
+        su interés.*/
+
+        function Tomar_datos(){
+            var edad=parseInt(prompt("Ingrese su edad:"));
+            Procesar_datos(edad);
+        }
+        function Procesar_datos(edad){
+            switch(true){
+                case (edad<7):
+                resultado="Te recomendamos las siguientes categorias de peliculas para tu edad: Animadas y Educativas"
+            }
+        }
+    </script>
+</body>
+</html>

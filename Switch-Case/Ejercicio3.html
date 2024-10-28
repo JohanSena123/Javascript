@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*- Pide al usuario que ingrese una calificación numérica del 0 al 100. Para mostrar un
+            mensaje dependiendo del rango de calificación (A, B, C, D, F)*/
+
+        function Tomar_datos(){
+            var calificacion=parseInt(prompt("Ingrese su calificacion:"));
+            Procesar_datos(calificacion)
+        }
+        function Procesar_datos(calificacion){
+            let resultado;
+            switch(true){
+                case (calificacion>=0 && calificacion<=20):
+                    resultado="Su nota es  F"
+                    break;
+                case (calificacion>=21 && calificacion<=40):
+                    resultado="Su nota es  D"
+                    break;
+                case (calificacion>=41 && calificacion<=60):
+                    resultado="Su nota es  C"
+                    break;
+                case (calificacion>=61 && calificacion<=80):
+                    resultado="Su nota es B"
+                    break;
+                case (calificacion>=81 && calificacion<=100):
+                    resultado="Su nota es A"
+                    break;
+                default:
+                    alert("Calificacion no valida")=false
+                    break;
+            }
+            Imprimir_datos(resultado);
+        }
+        function Imprimir_datos(resultado){
+            alert(resultado)
+            console.log(resultado);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

@@ -20,7 +20,7 @@
             let valido;
             if (piso>=1 && piso<=10){
                 resultado="El piso escogido esta disponible. Subiendo..."
-                if(resultado){
+                if(piso){
                     valido="Ha llegado al piso " +piso+ "."
                 }
             }
@@ -30,8 +30,8 @@
             Imprimir_datos(resultado,valido)
         }
         function Imprimir_datos(resultado,valido){
-            alert(resultado);
-            alert(valido);
+            alert(resultado)=true
+            alert(valido)=false
             console.log(resultado,valido);
         }
         Tomar_datos();

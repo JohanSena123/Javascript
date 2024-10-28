@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa como un asistente de un nutricionista, ayude a los pacientes a calcular su
+        índice de masa corporal (IMC). El programa debe solicitar al usuario su peso y altura, y luego
+        determinar su categoría de IMC (bajo peso, peso normal, sobrepeso u obesidad). IMC según los
+        siguientes criterios:
+        • Menor a 18.5 bajo peso, menor a 24.9 peso normal , menor a 29.9 "Sobrepeso“ y mayor
+        a 29,90 "Obesidad“.*/
+
+        function Tomar_datos(){
+            var peso=parseFloat(prompt("Ingrese su peso:"));
+            var altura=parseFloat(prompt("Ingrerse la altura:"))
+            Procesar_datos(peso,altura);
+        }
+        function Procesar_datos(peso,altura){
+            let IMC=peso/(altura*altura);
+            switch(true){
+                case(IMC>=0 && IMC<=18.5):
+                    resultado="Tiene bajo peso"
+                    break;
+                case(IMC>=18.6 && IMC<=24.9):IMC
+                    resultado="Tiene un peso normal"
+                    break;
+                case(IMC>=25 && IMC<=29.9):
+                    resultado="Tiene sobrepeso"
+                    break;
+                case(IMC>29.90):
+                    resultado="Tiene Obesidad"
+                    break;
+                default:
+                    alert("IMC no valido")
+                    break;
+            }
+            Imprimir_datos(resultado);
+        }
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
+        }
+        Tomar_datos();
+    </script>  
+</body>
+</html>

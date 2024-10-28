@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*En una tienda se venden tres tipos de productos: "A" (alimentos), "V" (vestimenta) y "E"
+        (electrónicos). Cada producto tiene un precio base diferente. Escribe un programa en que solicite
+        al cliente el tipo de producto que desea comprar (A, V o E) y la cantidad de unidades. Para
+        calcular el costo total de la compra. Si el cliente compra productos de tipo "A", obtiene un 10%
+        de descuento. Si compra productos de tipo "V", obtiene un 5% de descuento. Si compra
+        productos de tipo "E", no hay descuento. Finalmente, muestra el costo total de la compra con el
+        descuento aplicado y el costo sin descuento. Asegúrate de validar que la cantidad de unidades
+        sea un número positivo.*/
+
+        function Tomar_datos(){
+            var tipo=prompt("Ingrese el tipo producto que desea comprar A|V|E");
+            var cantidad=parseInt(prompt("Ingrese la cantidad de productos:"));
+            Procesar_datos(tipo,cantidad);
+        }
+        function Procesar_datos(tipo,cantidad){
+            var precioA=5000
+            var precioV=10000
+            var precioE=15000
+          
+            switch(tipo){
+                case "A":
+                var precio=precioA*cantidad
+                var descuento=precio*0.10
+                var total=descuento-precio
+                var totalSinDescuento=precio
+                break;
+            case "V":
+                var precio=precioV*cantidad
+                var descuento=precio*0.5
+                var total=descuento-precio
+                var totalSinDescuento=precio
+                break;
+            case "E":
+                var precio=precioE*cantidad
+                var descuento=precio*0.0
+                var total=descuento-precio
+                var totalSinDescuento=precio
+                break;
+            default:
+            alert("Producto no valido")=false
+            break;
+            }
+            Imprimir_datos(precio,descuento,total,totalSinDescuento);   
+        }
+        function Imprimir_datos(precio,descuento,total,totalSinDescuento){
+            alert("El precio del producto es " +precio+ " su descuento fue de " +descuento+ ". El total seria: " +total+ ".  y su total sin descuento seria " +totalSinDescuento+ ".")
+            console.log("El precio del producto es " +precio+ " su descuento fue de " +descuento+ ". El total seria: " +total+ ".  y su total sin descuento seria " +totalSinDescuento+ ".")
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

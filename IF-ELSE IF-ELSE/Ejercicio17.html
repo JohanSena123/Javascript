@@ -23,7 +23,7 @@
             let mensaje2;
             if(temperatura>=18 && temperatura<=25){
                 mensaje1="Analizando temperatura..."
-                if(mensaje1)
+                if(piso)
                 mensaje2="Temperatura adecuada. Subiendo al piso " +piso+ "."
             }
             else{
@@ -32,8 +32,8 @@
             Imprimir_datos(mensaje1,mensaje2);
         }
         function Imprimir_datos(mensaje1,mensaje2){
-            alert(mensaje1);
-            alert(mensaje2);
+            alert(mensaje1)=true
+            alert(mensaje2)=false
             console.log(mensaje1,mensaje2);
         }
         Tomar_datos();
