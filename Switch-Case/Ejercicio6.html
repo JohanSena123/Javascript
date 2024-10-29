@@ -22,10 +22,29 @@
         }
         function Procesar_datos(edad){
             switch(true){
-                case (edad<7):
-                resultado="Te recomendamos las siguientes categorias de peliculas para tu edad: Animadas y Educativas"
+                case (edad>=0 && edad<=7):
+                    resultado="Te recomendamos las siguientes categorias de peliculas para tu edad: Animadas y Educativas"
+                    break;
+                case (edad>=7 && edad<=17):
+                    resultado="Te recomendamos las siguientes categorias de peliculas para tu edad: Animadas, Aventuras y Comedias Familiares"
+                    break;
+                case(edad>=18 && edad<=30):
+                    resultado="Te recomendadmos las siguientes categorias de peliculas para tu edad: Accion, Drama, Comedia y Ciencia Ficción"
+                    break;
+                case(edad>=31):
+                    resultado="Te recomendamos las siguientes categorias de peliculas para tu edad: Clasicas y Dramas"
+                    break;
+                default:
+                    alert("Edad no valida")
+                    break;
             }
+        Imprimir_datos(resultado);
         }
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
+        }
+        Tomar_datos();
     </script>
 </body>
 </html>
