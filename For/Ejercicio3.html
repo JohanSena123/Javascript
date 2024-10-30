@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Calcular el factorial de un número dado por el usuario desde el teclado.*/
+
+        function Tomar_datos(){
+            var n=parseInt(prompt("Ingrese el numero que quiere calcular:"))
+            Procesar_datos(n);
+        }
+        function Procesar_datos(n){
+            let resultado=1;
+            for (let i=2;i<=n;i++){
+                resultado*=i;
+            }
+            Imprimir_datos(resultado)
+        }
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

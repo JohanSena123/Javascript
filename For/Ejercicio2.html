@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Calcular la sumatoria y el promedio de un rango de números indicados por el usuario e
+        imprimir los resultados en consola.*/
+
+        function Tomar_datos(){
+            var numero1=parseInt(prompt("Ingrese un numero:"));
+            var numero2=parseInt(prompt("Ingrese otro numero:"));
+            Procesar_datos(numero1,numero2)
+        }
+        function Procesar_datos(numero1,numero2){
+            for (var i=0;i=numero1+numero2;i++) 
+            break;
+            Imprimir_datos(i)
+        }
+        function Imprimir_datos(i){
+            alert(i);
+            console.log(i);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>

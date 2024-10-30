@@ -7,21 +7,21 @@
 </head>
 <body>
     <script>
-        /*- Pedir un numero e imprimir los números del cero al solicitado imprimir en la consola.*/
+        /*Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.*/
         function Tomar_datos(){
-            var numero=parseInt(prompt("Ingrese un numero:"))
+            var numero=parseInt(prompt("Ingrese un numero:"));
             Procesar_datos(numero);
         }
         function Procesar_datos(numero){
-            var li=[]
-            for(var i=1; i<numero+1;i++){
-                li.push(i);
+            let resultado;
+            for(var i=1;i<10;i++){
+                resultado=numero*i
             }
-            Imprimir_datos(li)
+            Imprimir_datos(resultado)
         }
-        function Imprimir_datos(li){
-            alert(li)
-            console.log(li)
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
         }
         Tomar_datos();
     </script>
