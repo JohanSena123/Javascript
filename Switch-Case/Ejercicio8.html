@@ -7,76 +7,81 @@
 </head>
 <body>
     <script>
-        /*Escribe un programa que simule un menú de restaurante. El programa debe permitir al cliente 
-        seleccionar varios platos y bebidas, calcular el costo total y aplicar un descuento según el 
-        método de pago (efectivo, tarjeta de crédito o cheque)*/
-        
         function Tomar_datos(){
-            alert("A continuacion se abrira un menu para que escoja su comidad")
-            var comida=parseInt(prompt("Ingrese un numero para escoger una opcion (1.Bandeja paisa/2.Higado encebollado/ 3.Pollo frito)"))
-            var bebida=parseInt(prompt("Ingrese un numero para escoger una opcion (1.Limonada/ 2.Refrescos/ 3.Jugos Naturales"))
-            var pago=parseInt(prompt("Ingrese un numero para escoger una opcion (1.Efectivo/ 2.Tarjeta de credito/ 3.Cheque) "))
-            Procesar_datos(comida,bebida,pago);
+            alert("A continuacion se abrira un menu para que escoja su comida");
+            var comida=parseInt(prompt("Ingrese un numero para escoger una opcion (1.Bandeja paisa/2.Higado encebollado/3.Pollo frito)"));
+            var bebida=parseInt(prompt("Ingrese un numero para escoger una opcion (1.Limonada/2.Refresco/3.Jugo natural)"));
+            var pago=parseInt(prompt("Ingrese un numero para escoger una opcion (1.Efectivo/2.Tarjeta de credito/3.Cheque)"));
+            Procesar_datos(comida, bebida, pago);
         }
-        function Procesar_datos(comida, bebida, pago) {
-    let resultado;
-    let resultado2;
-    let resultado3;
 
-    switch (comida) {
-        case 1:
-            resultado = "Has elegido una bandeja paisa";
-            break;
-        case 2:
-            resultado = "Has elegido un hígado encebollado";
-            break;
-        case 3:
-            resultado = "Has elegido un pollo frito";
-            break;
-        default:
-            resultado = "Opción de comida no valida";
-            break;
-    }
+        function Procesar_datos(comida,bebida,pago) {
+            let resultado, resultado2, resultado3;
+            let precioComida=0,precioBebida=0,descuento=0,total=0;
+            switch(comida){
+                case 1:
+                    resultado="Has elegido una bandeja paisa";
+                    precioComida=20000;
+                    break;
+                case 2:
+                    resultado="Has elegido un higado encebollado";
+                    precioComida=15000;
+                    break;
+                case 3:
+                    resultado="Has elegido un pollo frito";
+                    precioComida=18000;
+                    break;
+                default:
+                    resultado="Opcion de comida no valida";
+                    break;
+            }
+            switch(bebida){
+                case 1:
+                    resultado2="Has elegido una limonada";
+                    precioBebida=5000;
+                    break;
+                case 2:
+                    resultado2="Has elegido un refresco";
+                    precioBebida=3000;
+                    break;
+                case 3:
+                    resultado2="Has elegido un jugo natural";
+                    precioBebida=6000;
+                    break;
+                default:
+                    resultado2="Opcion de bebida no valida";
+                    break;
+            }
+            total=precioComida+precioBebida;
+            switch(pago){
+                case 1:
+                    resultado3="Has escogido el pago en efectivo";
+                    descuento=total*0.10;
+                    break;
+                case 2:
+                    resultado3="Has escogido el pago con tarjeta de credito";
+                    descuento=total*0.05;
+                case 3:
+                    resultado3="Has escogido el pago con cheque";
+                    descuento=0;
+                    break;
+                default:
+                    resultado3="Opcion de pago no valida";
+                    break;
+            }
+            total == descuento;
 
-    switch (bebida) {
-        case 1:
-            resultado2 = "Has elegido una limonada";
-            break;
-        case 2:
-            resultado2 = "Has elegido un refresco";
-            break;
-        case 3:
-            resultado2 = "Has elegido un jugo natural";
-            break;
-        default:
-            resultado2 = "Opción de bebida no valida";
-            break;
-    }
-
-    switch (pago) {
-        case 1:
-            resultado3 = "Has escogido el pago en efectivo";
-            break;
-        case 2:
-            resultado3 = "Has escogido el pago en tarjeta de crédito";
-            break;
-        case 3:
-            resultado3 = "Has escogido el pago en cheque";
-            break;
-        default:
-            resultado3 = "Opción de pago no valida";
-            break;
-    }
-
-    Imprimir_datos(resultado, resultado2, resultado3);
-}
-        
-        function Imprimir_datos(resultado,resultado2,resultado3){
-            alert(resultado)
-            alert(resultado2)
-            alert(resultado3)
-            console.log(resultado,resultado2,resultado3);
+            Imprimir_datos(resultado,resultado2,resultado3,total);
         }
+
+        function Imprimir_datos(resultado,resultado2,resultado3,total) {
+            alert(resultado);
+            alert(resultado2);
+            alert(resultado3);
+            alert("El costo total despues del descuento es: " + total);
+            console.log(resultado,resultado2,resultado3,"Total: $" + total);
+        }
+
         Tomar_datos();
     </script>
 </body>
