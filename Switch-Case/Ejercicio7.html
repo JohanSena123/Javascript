@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Crea un programa que simule un sistema de clasificación para un campeonato deportivo. El
+        programa debe solicitar al usuario que ingrese el resultado de un partido (ganado, perdido o
+        empatado) y, según el resultado, otorgar puntos a los equipos y mostrar la clasificación actual.*/
+
+        function Tomar_datos(){
+            var tipo=prompt("Ingrese su resultado(ganado/perdido/empate)");
+            Procesar_datos(tipo);
+        }
+        function Procesar_datos(tipo){
+            let acumulador=0
+            switch(tipo){
+                case 'ganado':
+                    resultado="Has obtenido 10 puntos"
+                    break;
+                case 'perdido':
+                    resultado="No has obtenido ningun punto"
+                    break;
+                case 'empate':
+                    resultado="Has obtenido 5 puntos"
+                    break;
+            }
+            Imprimir_datos(resultado);
+        }
+        function Imprimir_datos(resultado){
+            alert(resultado);
+            console.log(resultado);
+        }
+        Tomar_datos();
+    </script>
+</body>
+</html>
