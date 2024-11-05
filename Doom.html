@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pollito{
+            font-size: 20px;
+        }
+        .diego{
+            text-shadow: 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>hola</p>
+    <button onclick=cambio()>Crear</button>
+    <script>
+        function cambio(){
+        let parrafo=document.querySelector("p");
+            parrafo.textContent="adios";
+            parrafo.style.color="red";
+            parrafo.classList.toggle("pollito");
+            parrafo.classList.add("diego");
+            parrafo.classList.remove("diego");
+            parrafo.style.fontFamily=("Impact");
+        
+        let boton=document.createElement("Button");
+            parrafo.appendChild("boton");
+            boton.textContent="queso";
+            boton.style.color="blue";
+        }
+    </script>
+</body>
+</html>
